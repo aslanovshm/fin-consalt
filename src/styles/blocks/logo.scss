@@ -1,0 +1,12 @@
+.logo {
+  padding-top: 2px;
+  padding-bottom: 5px;
+  text-align: center;
+  background: #fbfbfb;
+}
+
+@include tablet {
+  .logo {
+    width: 100%;
+  }
+}

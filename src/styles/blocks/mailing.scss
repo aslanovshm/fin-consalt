@@ -1,0 +1,32 @@
+.mailing__inner {
+  padding-top: 29px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-bottom: 61px;
+  }
+
+  @include desktop {
+    width: 570px;
+    margin: 0 auto;
+  }
+}
+
+.mailing__heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.mailing__description {
+  margin: 0 0 17px 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $theme-color;
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+}

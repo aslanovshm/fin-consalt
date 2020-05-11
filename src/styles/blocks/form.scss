@@ -1,0 +1,115 @@
+@include tablet {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__item {
+  position: relative;
+  margin: 0 0 13px 0;
+
+  @include tablet {
+    width: 48%;
+    margin-bottom: 24px;
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.form__field {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 16px 8px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $theme-color;
+  }
+}
+
+.form__checkbox {
+  position: relative;
+  display: flex;
+  margin: 22px 0 22px 0;
+
+  @include tablet {
+    width: 48%;
+    margin: 0;
+  }
+}
+
+.form__checkbox-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.form__checkbox-label {
+  display: flex;
+  font-size: 10px;
+  line-height: 12px;
+  color: #101010;
+
+  @include desktop {
+    line-height: 16px;
+  }
+}
+
+.form__checkbox-text {
+  width: 261px;
+
+  @include tablet {
+    width: 221px;
+  }
+}
+
+.form__checkbox-input + .form__checkbox-label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  color: transparent;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  transition: color ease 0.3s;
+}
+
+.form__checkbox-input:checked + .form__checkbox-label:before {
+  background-image: url("../images/icon-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $theme-color;
+  border-color: $theme-color;
+}
+
+.form__checkbox-input:focus + .form__checkbox-label:before {
+  border-color: $theme-color;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.form__btn {
+  @include tablet {
+    width: 48%;
+  }
+}

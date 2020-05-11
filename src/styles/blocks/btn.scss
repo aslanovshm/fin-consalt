@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 4px;
+  background-color: $theme-color;
+}
+
+.btn__link {
+  text-decoration: none;
+}

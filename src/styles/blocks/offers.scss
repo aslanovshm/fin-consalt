@@ -1,0 +1,174 @@
+.offers {
+  background-color: #433178;
+}
+
+.offers__inner {
+  padding-top: 16px;
+  padding-bottom: 21px;
+
+  @include tablet {
+    padding-top: 36px;
+    padding-bottom: 26px;
+  }
+
+  @include desktop {
+    padding-top: 50px;
+  }
+}
+
+.offers__heading {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  @include desktop {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+.offers__description {
+  margin: 0 0 26px 0;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: $theme-color;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
+
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+.offers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.offers__item {
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 18px 38px 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
+
+  &:nth-child(2) ~ & {
+    display: none;
+  }
+
+  @include tablet {
+    width: 260px;
+    margin-bottom: 20px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+
+    &:nth-child(2) ~ & {
+      display: block;
+    }
+
+    &:nth-child(4) ~ & {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    width: 370px;
+    padding-top: 42px;
+
+    &:nth-child(4) ~ & {
+      display: block;
+    }
+  }
+}
+
+.offers__recommended {
+  position: absolute;
+  right: 0;
+  padding: 9px 11px 13px 18px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: $theme-color;
+}
+
+.offers__logo {
+  display: block;
+  height: 58px;
+  margin-bottom: 31px;
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
+}
+
+.offers__details {
+  width: 100%;
+  margin-bottom: 14px;
+  border-spacing: 0 3px;
+
+  & th,
+  & td {
+    width: 55%;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  & tr:last-child td {
+    padding-bottom: 0;
+  }
+
+  & th {
+    padding-right: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #979797;
+  }
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
+}
+
+.offers__btn {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 14px;
+  }
+}
+
+.offer__registration {
+  display: block;
+  text-align: center;
+  color: #979797;
+}
+
+.offers__banner img {
+  border-radius: 8px;
+
+  @include desktop {
+    display: none;
+  }
+}

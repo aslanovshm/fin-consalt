@@ -1,0 +1,138 @@
+.page-header__inner {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.page-header__left {
+  position: relative;
+  color: #ffffff;
+  background-color: #2c1b5c;
+
+  @include tablet {
+    width: 50%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      width: 247px;
+      height: 210px;
+      background-image: url("../images/background-header-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../images/background-header-tablet@2x.png");
+      }
+    }
+  }
+
+  @include desktop {
+    &:after {
+      right: -220px;
+      width: 443px;
+      height: 377px;
+      background-image: url("../images/background-header-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../images/background-header-desktop@2x.png");
+      }
+    }
+  }
+}
+
+.page-header__left-wrap {
+  box-sizing: border-box;
+  padding: 36px 10px 24px;
+
+  @include tablet {
+    position: absolute;
+    right: 0;
+    width: 260px;
+    padding-top: 46px;
+  }
+
+  @include desktop {
+    right: 335px;
+  }
+}
+
+.page-header__title {
+  margin: 0 0 26px 0;
+  font-size: 18px;
+  text-align: center;
+
+  & b {
+    display: block;
+    font-size: 28px;
+    line-height: 40px;
+    color: $theme-color;
+  }
+
+  @include tablet {
+    text-align: left;
+    margin-bottom: 42px;
+  }
+}
+
+.page-header__list {
+  margin: 0;
+  padding: 0 0 0 22px;
+  list-style: none;
+
+  & li {
+    position: relative;
+    margin-bottom: 23px;
+    padding-left: 29px;
+    line-height: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: $theme-color;
+      border-radius: 50%;
+    }
+
+    @include tablet {
+      margin-bottom: 27px;
+    }
+  }
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
+
+.page-header__right {
+  box-sizing: border-box;
+
+  @include tablet {
+    width: 50%;
+  }
+
+  &-wrap {
+    padding: 15px 12px 7px 13px;
+
+    @include tablet {
+      width: 260px;
+      padding: 35px 0 53px 40px;
+    }
+
+    @include desktop {
+      margin-left: 320px;
+    }
+  }
+}

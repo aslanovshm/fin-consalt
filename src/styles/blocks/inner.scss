@@ -1,0 +1,13 @@
+.inner {
+  box-sizing: border-box;
+  width: 92.5%;
+  margin: 0 auto;
+
+  @include tablet {
+    width: $tablet-container;
+  }
+
+  @include desktop {
+    width: $desktop-container;
+  }
+}

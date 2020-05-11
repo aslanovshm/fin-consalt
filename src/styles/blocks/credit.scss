@@ -1,0 +1,64 @@
+.credit {
+  display: flex;
+  flex-direction: column;
+}
+
+.credit__logo {
+  order: 1;
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+
+  @include tablet {
+    margin-left: -27px;
+  }
+}
+
+.credit__details {
+  order: 3;
+}
+
+.credit__btn {
+  order: 2;
+  margin-bottom: 10px;
+}
+
+@include tablet {
+  .credit__btn {
+    order: 3;
+  }
+}
+
+.credit__details {
+  margin: 0 auto;
+  padding: 0 26px;
+  font-size: 14px;
+  line-height: 16px;
+  border-spacing: 0 25px;
+
+  & th,
+  & td {
+    width: 50%;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  & tr:last-child td {
+    padding-bottom: 0;
+  }
+
+  & th {
+    padding-right: 10px;
+    font-weight: 400;
+    text-align: left;
+    color: #979797;
+  }
+
+  & td {
+    color: #101010;
+  }
+
+  @include tablet {
+    padding: 0;
+  }
+}
